@@ -12,6 +12,7 @@
 		8223B95F1FF7EF2900A7E621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8223B95D1FF7EF2900A7E621 /* Main.storyboard */; };
 		8223B9611FF7EF2900A7E621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8223B9601FF7EF2900A7E621 /* Assets.xcassets */; };
 		8223B9641FF7EF2900A7E621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8223B9621FF7EF2900A7E621 /* LaunchScreen.storyboard */; };
+		8223B96C1FF7F0BB00A7E621 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223B96B1FF7F0BB00A7E621 /* Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8223B9601FF7EF2900A7E621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8223B9631FF7EF2900A7E621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8223B9651FF7EF2900A7E621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8223B96B1FF7F0BB00A7E621 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Document.swift; path = TestUIDocumentSave/Document.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		8223B94D1FF7EF2900A7E621 = {
 			isa = PBXGroup;
 			children = (
+				8223B96B1FF7F0BB00A7E621 /* Document.swift */,
 				8223B9581FF7EF2900A7E621 /* TestUIDocumentSave */,
 				8223B9571FF7EF2900A7E621 /* Products */,
 			);
@@ -138,6 +141,7 @@
 			files = (
 				8223B95C1FF7EF2900A7E621 /* ViewController.swift in Sources */,
 				8223B95A1FF7EF2900A7E621 /* AppDelegate.swift in Sources */,
+				8223B96C1FF7F0BB00A7E621 /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +281,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VECF32DRUZ;
 				INFOPLIST_FILE = TestUIDocumentSave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PapojThamja.TestUIDocumentSave;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PapojThamja.TestUIDocumentSave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,8 +297,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VECF32DRUZ;
 				INFOPLIST_FILE = TestUIDocumentSave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PapojThamja.TestUIDocumentSave;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PapojThamja.TestUIDocumentSave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
