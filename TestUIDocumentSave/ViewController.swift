@@ -15,12 +15,15 @@ func loadFileURLs(from dirURL: URL) -> [URL]? {
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     
     var currentDoc: UIDocument?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        shareButton.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +41,8 @@ class ViewController: UIViewController {
                 self.verifyNumberOfFiles()
             }
         }
+        
+        shareButton.isEnabled = true
     }
     
     @IBAction func closeDoc() {

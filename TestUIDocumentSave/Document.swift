@@ -37,6 +37,7 @@ class Document: UIDocument {
     override func fileAttributesToWrite(to url: URL, for saveOperation: UIDocumentSaveOperation) throws -> [AnyHashable : Any] {
         var attr: [AnyHashable : Any] = [URLResourceKey.hasHiddenExtensionKey: true]
         
+        // Ignore the proper resizing for now.
 //        guard let thumbnail = self.thumbnail else {
 //            return attr
 //        }

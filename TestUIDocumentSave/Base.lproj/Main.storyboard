@@ -47,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="nzj-EG-TTk" id="clG-jk-Mho"/>
+                        <outlet property="shareButton" destination="mVS-xW-Dx7" id="8D6-6J-zGU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
