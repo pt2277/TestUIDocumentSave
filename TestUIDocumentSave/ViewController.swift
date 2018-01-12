@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
+    var currentDoc: UIDocument?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +30,42 @@ class ViewController: UIViewController {
     
     @IBAction func createDoc(_ sender: Any) {
         let uuid = UUID().uuidString
-        let doc = Document(baseName: "myDoc-\(uuid)")
-        doc.save(to: doc.fileURL, for: .forCreating) { (completed) in
+        
+        closeDoc()
+        currentDoc = Document(baseName: "myDoc-\(uuid)")
+        currentDoc!.save(to: currentDoc!.fileURL, for: .forCreating) { (completed) in
             if (completed) {
-                doc.close(completionHandler: nil)
                 self.verifyNumberOfFiles()
             }
         }
+    }
+    
+    @IBAction func closeDoc() {
+        currentDoc?.close(completionHandler: nil)
+    }
+    
+    @IBAction func share(_ sender: UIButton) {
+        guard let currentDoc = currentDoc else { return }
+        
+        let activityViewController = UIActivityViewController(activityItems: [currentDoc], applicationActivities: nil)
+        
+        let excludedActivities: [UIActivityType] = [
+            .postToFacebook,
+            .postToTwitter,
+            .postToWeibo,
+            .print,
+            .assignToContact,
+            .saveToCameraRoll,
+            .addToReadingList,
+            .postToFlickr,
+            .postToTencentWeibo,
+            .openInIBooks]
+        activityViewController.excludedActivityTypes = excludedActivities
+        
+        activityViewController.modalPresentationStyle = .popover
+        activityViewController.popoverPresentationController?.sourceView = sender
+        activityViewController.popoverPresentationController?.sourceRect = sender.bounds
+        present(activityViewController, animated: true, completion: nil)
     }
     
     func verifyNumberOfFiles() {
